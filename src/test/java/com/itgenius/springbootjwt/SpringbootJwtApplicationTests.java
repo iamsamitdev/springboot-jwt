@@ -10,4 +10,10 @@ class SpringbootJwtApplicationTests {
 	void contextLoads() {
 	}
 
+	@Test int DemoTest(int a, int b){
+		int sum = a + b;
+		return sum;
+		// System.out.println("Hello Demo");
+	}
+
 }

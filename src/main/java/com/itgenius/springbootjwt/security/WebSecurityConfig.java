@@ -21,6 +21,7 @@ import com.itgenius.springbootjwt.security.services.UserDetailsServiceImpl;
 @Configuration
 @EnableGlobalMethodSecurity(prePostEnabled = true)
 public class WebSecurityConfig {
+
     
     @Autowired
     UserDetailsServiceImpl userDetailsService;
@@ -35,6 +36,9 @@ public class WebSecurityConfig {
 
     @Bean
     public DaoAuthenticationProvider authenticationProvider(){
+
+    String aaaa;
+    
         DaoAuthenticationProvider authProvider = new DaoAuthenticationProvider();
         authProvider.setUserDetailsService(userDetailsService);
         authProvider.setPasswordEncoder(passwordEncoder());

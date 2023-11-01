@@ -46,7 +46,14 @@ public class User {
     
     private Set<Role> roles = new HashSet<>();
 
-    public User(String string, String string2, String string3) {}
+    public User(){}
+
+    public User(@NotBlank @Size(max = 20) String username, @NotBlank @Size(max = 64) @Email String email,
+            @NotBlank @Size(max = 120) String password) {
+        this.username = username;
+        this.email = email;
+        this.password = password;
+    }
 
     public Long getId() {
         return id;
